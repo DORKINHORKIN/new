@@ -40,7 +40,11 @@ jobs:
         run: bun install  # Remove this step if you don't have a package.json with dependencies
 
       - name: Build with Bun
+<<<<<<< HEAD
         run: bun build  # Adjust this command if your build process differs (e.g., bun run build)
+=======
+        run: bun run build  # Adjust this command if your build process differs (e.g., bun run build)
+>>>>>>> 2d43eed52b07986f87eb03176f8e317ff820e2c6
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
