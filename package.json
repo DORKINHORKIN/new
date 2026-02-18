@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev": "bun --watch --hot src/backend/index.ts",
-    "build": "bun run build",
+    "build": "bun ./build.ts",
     "start": "bun run start"
   }
 }
