@@ -1,0 +1,25 @@
+{
+  "name": "new",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/tailwindcss": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "bun-plugin-tailwind": "latest",
+    "preact": "latest",
+    "preact-render-to-string": "latest",
+    "preact-router": "latest",
+    "tailwindcss": "^4.1.18",
+    "wouter-preact": "^3.9.0"
+  },
+  "scripts": {
+    "dev": "bun --watch --hot src/backend/index.ts",
+    "build": "bun run build",
+    "start": "bun run start"
+  }
+}
