@@ -40,7 +40,7 @@ jobs:
         run: bun install  # Remove this step if you don't have a package.json with dependencies
 
       - name: Build with Bun
-        run: bun build ./src/frontend/index.html --outdir dist  # Adjust this command if your build process differs (e.g., bun run build)
+        run: bun build  # Adjust this command if your build process differs (e.g., bun run build)
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload only the dist folder
-          path: 'dist'
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment

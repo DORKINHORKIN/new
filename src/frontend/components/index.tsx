@@ -2,23 +2,23 @@ import { Route, Switch, Link, useLocation } from "wouter-preact";
 import Header from "./header.tsx";
 import Footer from "./footer.tsx";
 
-import { Routes, type Route } from "../lib/routes.tsx";
+import { Routes, type RouteInfo } from "../lib/routes.tsx";
 
 const Content = () => {
   const [location, setLocation] = useLocation();
   
   return (
     <main className="grow max-h-content">
-      <Switch>
-        {Routes.map((route: Route) => (
-          <Route key={route.path} path={route.path}>
-            <route.component />
+      <Switch >
+        {Routes.map((routeInfo: RouteInfo) => (
+          <Route key={routeInfo.path} path={routeInfo.path}>
+            <routeInfo.component />
           </Route>
         ))}
         <Route path="*">
           <div className="p-4">
             <h2 className="text-2xl font-bold">Page Not Found</h2>
-            {globalThis.location.pathname}
+            {location}
           </div>
         </Route>
       </Switch>
